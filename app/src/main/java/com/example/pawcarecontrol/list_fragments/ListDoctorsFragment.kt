@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.pawcarecontrol.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class ListDoctorsFragment : Fragment() {
@@ -20,6 +21,30 @@ class ListDoctorsFragment : Fragment() {
 
         btnCreateDoctor.setOnClickListener{
             findNavController().navigate(R.id.action_listDoctorsFragment_to_createDoctorFragment)
+        }
+
+        val bottomNavigation = root.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        bottomNavigation.selectedItemId = R.id.page_1
+
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.page_1 -> {
+                    true
+                }
+
+                R.id.page_2 -> {
+                    findNavController().navigate(R.id.action_global_appointments)
+                    true
+                }
+
+                R.id.page_3 -> {
+                    findNavController().navigate(R.id.action_global_pets)
+                    true
+                }
+
+                else -> false
+            }
         }
 
         return root

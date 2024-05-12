@@ -19,7 +19,7 @@ class CreatePetFragment : Fragment() {
         val btnAddPet = root.findViewById<Button>(R.id.btnAddPet)
 
         btnAddPet.setOnClickListener{
-            findNavController().navigate(R.id.action_createAppointmentFragment_to_listAppointmentsFragment)
+            findNavController().navigate(R.id.action_createPetFragment_to_listPetsFragment)
         }
 
         return  root
