@@ -52,17 +52,17 @@
             android:paddingBottom="40dp">
 
             <Button
-                android:layout_marginBottom="10dp"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
                 android:id="@+id/btnToLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_rounded_button"
-                android:backgroundTint="@color/dark_details"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/inika"
                 android:paddingHorizontal="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
                 android:text="Iniciar sesión"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/dark_details"
                 android:textSize="21sp" />
 
             <LinearLayout
@@ -101,10 +101,12 @@
                 android:layout_height="wrap_content"
                 android:text="Continuar con google"
                 app:icon="@drawable/google"
+                android:backgroundTint="@color/dark_details"
                 app:iconTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
